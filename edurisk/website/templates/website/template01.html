@@ -1,0 +1,54 @@
+<section class="hero">
+    <div class="columns m-0 p-0">
+        {%  include "website/widget-sidebar.html" %}
+        <div class="column p-0 has-background-light">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item sidebar-button link-evaline p-2 ml-4 mr-4" data-target="id-sidebar-menu">
+                        <i class="fa fa-bars" id="sidebar-icon"></i>
+                    </a>
+                </div>
+            
+                <div class="navbar-menu">      
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="field is-grouped p-2">
+                                <button class="button is-evaline is-outlined is-fullwidth ml-2">
+                                    <span>Exit</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="hero is-small is-evaline p-4">
+                <div class="hero-body mt-2">
+                    <div class="container">
+                    </div>
+                </div>
+            </section>
+            <div class="column is-10 p-0 is-offset-1">
+                <section class="hero is-small has-background-white is-cut-top-2">
+                    <div class="hero-body">
+                        <div class="container">
+                            <p class="title has-text-centered p-2">
+                                Please complete your data,
+                            </p>
+                            <p class="subtitle has-text-centered p-2">
+                                The data will automatically converted to your Resume
+                            </p>
+                            <div class="is-divider divider-evaline" data-content="Personal Information"></div>
+                            
+                            
+                        </div>
+                    </div>
+                </section>
+                {%  include "website/footer.html" %}
+            </div>
+        </div>
+    </div>
+</section>

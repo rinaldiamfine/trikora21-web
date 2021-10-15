@@ -1,0 +1,70 @@
+{% extends "website/layout.html" %}
+
+{% block content %}
+<form method='POST'> 
+	{% csrf_token %}
+	<section class="hero has-background-light">
+		{% include "website/widget-navbar.html"%}
+		<div class="hero-body"></div>
+	</section>
+	  <section class="hero is-evaline">
+		  <div class="hero-body pb-4 mb-4">
+			<div class="container">
+				<div class="columns is-vcentered">
+					<div class="column is-5 is-offset-1 pb-4">
+						<article class="">
+							<figure class="image is-3by2">
+								<img src="/static/images/signin.svg" alt="">
+							</figure>
+						</article>
+					</div>
+					<div class="column is-offset-2 box is-cut-top-6 is-cut-bottom-4">
+						<br/>
+						  <h2 class="title is-3 is-vcentered is-bold is-spaced p-4 has-text-centered mb-0">Sign in</h2>
+						  <br/>
+						<div class="field pl-4 pr-4 pt-2 pb-2">
+							  <p class="control has-icons-left has-icons-right">
+								<input id="id_email" name="email" class="input" type="email" placeholder="Email">
+								<span class="icon is-small is-left">
+									<i class="fas fa-envelope"></i>
+								</span>
+								<span class="icon is-small is-right">
+									<i class="fas fa-check"></i>
+								</span>
+							</p>
+						</div>
+						<div class="field pl-4 pr-4 pt-2 pb-2">
+							<p class="control has-icons-left">
+								<input id="id_password" name="password" class="input" type="password" placeholder="Password">
+								<span class="icon is-small is-left">
+									   <i class="fas fa-lock"></i>
+								</span>
+							</p>
+						</div>
+						<div class="field pl-4 pr-4">
+							   <p class="control has-text-right">
+								<b>
+									<a class="link-evaline-gray" href="/forgot-password">Forgot password?</a>
+								</b>
+							   </p>
+						</div>
+						<br/>
+						<div class="field">
+							  <p class="control has-text-centered column is-4 is-offset-4 p-0">
+								   <button type='submit' class="button is-fullwidth is-rounded is-evaline raised">Sign in</button>
+							   </p>
+						</div>
+						<br/>
+						<div class="field pl-4 pr-4 mb-4">
+							   <p class="control" style="text-align:center;">
+								   <span>Don't have an account? <b><a class="link-evaline-gray" href="/register">Create</a></b></span>
+							   </p>
+						</div>
+						<br/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
+{% endblock %}

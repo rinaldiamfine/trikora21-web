@@ -1,0 +1,92 @@
+{% extends "website/layout.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="columns m-0 p-0">
+        {%  include "website/widget-sidebar.html" %}
+        <div class="column p-0 has-background-light">
+            {%  include "website/widget-navbar.html" %}
+            <div class="column is-10 p-0 is-offset-1">
+                <section class="hero is-fullheight-with-navbar">
+                    <div class="hero-body">
+                        <div class="container">
+                            <p class="title has-text-centered p-2">
+                                Hello,
+                            </p>
+                            <p class="subtitle has-text-centered p-2">
+                                Welcome to the EvaLine!
+                            </p>
+                            <div class="is-divider divider-evaline" data-content="How can i help you today?"></div>
+                            <div class="tile is-ancestor p-2">
+                                <div class="tile is-4 is-parent evaline-feature is-active" id="feature-tracking" data-href="/tracking">
+                                    <article class="tile is-child box">
+                                        <i class="fa fa-check-circle icon-active is-size-4"></i>
+                                        <figure class="image is-2by1">
+                                            <img class="p-2" src="/static/undraw/location_tracking.svg" alt="">
+                                        </figure>
+                                        <p class="p-2 is-size-6 subtitle has-text-centered has-text-weight-light">Tracking</p>
+                                    </article>
+                                </div>
+                                <div class="tile is-4 is-parent evaline-feature" id="feature-calculator" data-href="/sallary">
+                                    <article class="tile is-child box">
+                                        <i class="fa fa-check-circle icon-active is-size-4"></i>
+                                        <figure class="image is-2by1">
+                                            <img class="p-2" src="/static/undraw/calculator.svg" alt="">
+                                        </figure>
+                                        <p class="p-2 is-size-6 subtitle has-text-centered has-text-weight-light">Calculator</p>
+                                    </article>
+                                </div>
+                                <div class="tile is-4 is-parent evaline-feature" id="feature-order" data-href="/order">
+                                    <article class="tile is-child box">
+                                        <i class="fa fa-check-circle icon-active is-size-4"></i>
+                                        <figure class="image is-2by1">
+                                            <img class="p-2" src="/static/undraw/order.svg" alt="">
+                                        </figure>
+                                        <p class="p-2 is-size-6 subtitle has-text-centered has-text-weight-light">Order</p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="tile is-ancestor p-2">
+                                <div class="tile is-4 is-parent evaline-feature" id="feature-profile" data-href="/profile">
+                                    <article class="tile is-child box">
+                                        <i class="fa fa-check-circle icon-active is-size-4"></i>
+                                        <figure class="image is-2by1">
+                                            <img class="p-2" src="/static/undraw/profile.svg" alt="">
+                                        </figure>
+                                        <p class="p-2 is-size-6 subtitle has-text-centered has-text-weight-light">User Management</p>
+                                    </article>
+                                </div>
+                                <div class="tile is-4 is-parent evaline-feature" id="feature-setting" data-href="/setting">
+                                    <article class="tile is-child box">
+                                        <i class="fa fa-check-circle icon-active is-size-4"></i>
+                                        <figure class="image is-2by1">
+                                            <img class="p-2" src="/static/undraw/setting.svg" alt="">
+                                        </figure>
+                                        <p class="p-2 is-size-6 subtitle has-text-centered has-text-weight-light">Setting</p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="is-divider divider-evaline"></div>
+                            <div class="field is-grouped p-2 column is-6">
+                                <button class="button is-default is-fullwidth mr-2 action-dashboard-previous" disabled>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </span>
+                                    <span>Previous</span>
+                                </button>
+                                <button class="button is-evaline is-fullwidth ml-2 action-dashboard-next">
+                                    <span>Next</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {%  include "website/footer.html" %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

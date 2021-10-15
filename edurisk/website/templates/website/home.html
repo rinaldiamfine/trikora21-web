@@ -1,0 +1,127 @@
+{% extends "website/layout.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="columns m-0 p-0">
+        {%  include "website/widget-sidebar.html" %}
+        <div class="column p-0 has-background-light">
+            {%  include "website/widget-navbar.html" %}
+
+            <section class="hero is-fullheight-with-navbar is-light">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="columns is-vcentered">
+                            <div class="column is-5 is-offset-1 landing-caption">
+                                <h1 class="title is-1 is-bold is-spaced">
+                                    EvaLine
+                                </h1>
+                                <h2 class="subtitle is-5 is-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                                <p>
+                                    <a class="button is-evaline is-rounded is-outlined is-large">
+                                        Try Now!
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="column is-6">
+                                <figure class="image is-3by2">
+                                    <img src="/static/undraw/map.svg" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="hero is-evaline pt-4 pb-4">
+                <div class="hero-foot mb-2">
+                    <div class="container">
+                        <div class="tabs is-centered">
+                        </div>
+                        <div class="divider is-centered"></div>
+                        <div class="subtitle has-text-white has-text-centered is-spaced mt-2">"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"</div>
+                        <div class="tabs is-centered"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="hero is-fullheight is-light">
+                <div class="hero-body">
+                    <div class="container">
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="hero is-fullheight is-evaline">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="title-wrapper has-text-centered">
+                            <h2 class="title is-2 has-text-white">Design your own information</h2>
+                            <h3 class="subtitle is-5 has-text-white">More beautiful, more attractive</h3>
+                            <br/>
+                        </div>
+                        <div class="content-wrapper">
+                            <div class="columns">
+                                <div class="column is-one-third mb-4">
+                                    <div class="box has-background-white feature-card has-text-centered">
+                                        <div class="card-title p-4">
+                                            <b>Filling your data</b>
+                                        </div>
+                                        <div class="card-icon p-4">
+                                            <figure class="image is-2by1">
+                                                <img src="/static/images/information.svg">
+                                            </figure>
+                                        </div>
+                                        <div class="card-text p-4">
+                                            <p>This is some explanatory text that is on two rows</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="box has-background-white feature-card has-text-centered">
+                                        <div class="card-title p-4">
+                                            <b>Select templates</b>
+                                        </div>
+                                        <div class="card-icon p-4">
+                                            <figure class="image is-2by1">
+                                                <img src="/static/images/selecting.svg">
+                                            </figure>
+                                        </div>
+                                        <div class="card-text p-4">
+                                            <p>This is some explanatory text that is on two rows</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="box has-background-white feature-card has-text-centered">
+                                        <div class="card-title p-4">
+                                            <b>Published your data</b>
+                                        </div>
+                                        <div class="card-icon p-4">
+                                            <figure class="image is-2by1">
+                                                <img src="/static/images/publish.svg">
+                                            </figure>
+                                        </div>
+                                        <div class="card-text p-4">
+                                            <p>This is some explanatory text that is on two rows</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {% if user.is_authenticated %}
+                <section class="hero">
+                    <div class="columns m-0 p-0">
+                        <div class="column p-0 has-background-light">
+                            <div class="column is-10 p-0 is-offset-1">
+                                {%  include "website/footer.html" %}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

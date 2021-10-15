@@ -1,0 +1,56 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    {% if user.is_authenticated %}
+        <div class="navbar-brand">
+            <a class="navbar-item sidebar-button link-evaline p-2 ml-4 mr-4" data-target="id-sidebar-menu">
+                <i class="fa fa-bars" id="sidebar-icon"></i>
+            </a>
+            <div class="navbar-item p-2 ml-4 mr-4 has-text-weight-bold is-uppercase is-size-5">
+                {{ title }}
+            </div>
+        </div>
+        <div class="navbar-menu">      
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped p-2">
+                        <form id="logoutform" method="POST" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button class="button is-evaline is-outlined is-fullwidth ml-2">
+                                <span>Exit</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    
+    {% if not user.is_authenticated %}
+        <div class="navbar-menu">      
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped p-2">
+                        {% if title %}
+                            <a href="/login" class="button is-evaline is-outlined is-fullwidth ml-2">
+                                <span>Sign in</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        {% endif %}
+                        {% if not title %}
+                            <a href="/home" class="button is-evaline is-outlined is-fullwidth ml-2">
+                                <span>Home</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</nav>

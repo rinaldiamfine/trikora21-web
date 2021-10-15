@@ -1,0 +1,36 @@
+{% if not user.is_authenticated %}
+    <section class="hero">
+        <div class="columns m-0 p-0">
+            <div class="column p-0 has-background-light">
+                <div class="column is-10 p-0 is-offset-1">
+                    <footer class="footer has-background-light">
+                        <div class="content ">
+                            <p class="has-text-weight-light has-text-black">
+                                <b>
+                                    <a class="link-evaline mr-2" href="https://spreadthekindess.com">Spreadthekindess</a> . <a class="link-evaline mr-2 ml-2" href="#">Features</a> . <a class="link-evaline mr-2 ml-2" href="#">Blog</a> . <a class="link-evaline ml-2" href="#">License</a>
+                                </b>
+                            </p>
+                            <p class="has-text-weight-light">
+                                © 2021 · EvaLine · All rights reserved
+                            </p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}
+{% if user.is_authenticated %}
+    <footer class="footer has-background-light">
+        <div class="content ">
+            <p class="has-text-weight-light has-text-black">
+                <b>
+                    <a class="link-evaline mr-2" href="https://spreadthekindess.com">Spreadthekindess</a> . <a class="link-evaline mr-2 ml-2" href="#">Features</a> . <a class="link-evaline mr-2 ml-2" href="#">Blog</a> . <a class="link-evaline ml-2" href="#">License</a>
+                </b>
+            </p>
+            <p class="has-text-weight-light">
+                © 2021 · EvaLine · All rights reserved
+            </p>
+        </div>
+    </footer>
+{% endif %}

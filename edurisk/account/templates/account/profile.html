@@ -1,0 +1,121 @@
+{% extends "website/layout.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="columns m-0 p-0">
+        {%  include "website/widget-sidebar.html" %}
+        <div class="column p-0 has-background-light">
+            {%  include "website/widget-navbar.html" %}
+            <section class="hero is-small is-evaline p-4">
+                <div class="hero-body mt-4 mb-4">
+                    <br/>
+                </div>
+            </section>
+            <div class="column is-10 p-0 is-offset-1">
+                <section class="hero is-small has-background-white is-cut-top-2 box">
+                    <div class="hero-body">
+                        <div class="container p-4">
+                            <p class="title p-2">
+                                Account
+                            </p>
+                            <div class="is-divider divider-evaline" data-content="Personal Information"></div>
+                            <form method="POST" action="" class="evaline-svg-background">
+                                {% csrf_token %}
+                                <div class="columns">
+                                    <div class="column is-6">
+                                      <div class="field">
+                                            <label class="label" for="{{ form.name.id_for_label }}">Name</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                {{ form.name }}
+                                                <span class="icon is-small is-left is-evaline">
+                                                    <i class="fas fa-user"></i>
+                                                </span>                                              
+                                            </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-6">
+                                      <div class="field">
+                                            <label class="label" for="{{ form.title.id_for_label }}">Title</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                {{ form.title }}
+                                                <span class="icon is-small is-left is-evaline">
+                                                    <i class="fas fa-briefcase"></i>
+                                                </span>                                              
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <div class="column is-6">
+                                      <div class="field">
+                                            <label class="label" for="{{ form.phone.id_for_label }}">Phone</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                {{ form.phone }}
+                                                <span class="icon is-small is-left is-evaline">
+                                                    <i class="fas fa-phone"></i>
+                                                </span>                                              
+                                            </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-6">
+                                      <div class="field">
+                                            <label class="label" for="{{ form.email.id_for_label }}">Email</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                {{ form.email }}
+                                                <span class="icon is-small is-left is-evaline">
+                                                    <i class="fas fa-envelope"></i>
+                                                </span>                                              
+                                            </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column is-6">
+                                      <div class="field">
+                                            <label class="label" for="{{ form.birthday.id_for_label }}">Birthday</label>
+                                            <div class="control has-icons-left has-icons-right">
+                                                {{ form.birthday }}
+                                                <span class="icon is-small is-left is-evaline">
+                                                    <i class="fas fa-calendar"></i>
+                                                </span>                                              
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <div class="column is-6">
+                                        <div class="field">
+                                            <label class="label" for="{{ form.gender.id_for_label }}">Gender</label>
+                                            <div class="control has-icons-left">
+                                                <div class="select select-evaline is-fullwidth">
+                                                    {{ form.gender }}
+                                                </div>
+                                                <span class="icon is-small is-left is-evaline">
+                                                    <i class="fas fa-venus-mars"></i>
+                                                </span>
+                                            </div>
+                                            {% for error in form.gender.errors %}
+                                                <p class="help is-danger">{{ error }}</p>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="is-divider divider-evaline"></div>
+                                <div class="field is-grouped p-2 column is-2 is-offset-10">
+                                    <button type="submit" class="button is-evaline is-fullwidth">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-save"></i>
+                                        </span>
+                                        <span>Save</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                {%  include "website/footer.html" %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

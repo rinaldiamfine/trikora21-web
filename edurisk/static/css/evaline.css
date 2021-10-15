@@ -1,0 +1,198 @@
+.widget-navbar {
+    position: -webkit-sticky !important; /* Safari */
+    position: sticky !important;
+    top: 0;
+}
+
+.set-active {
+    display: block !important;
+}
+.set-inactive {
+    display: none !important;
+}
+
+/* #navbar-clone {
+    overflow: hidden;
+    height: 0; opacity: 0;
+    transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+#navbar-clone.set-inactive {
+    height: auto; opacity: 1;
+    transition: height 0ms 0ms, opacity 600ms 0ms;
+} */
+
+/* .sidebar-menu {
+    display: none !important;
+}
+.sidebar-menu.is-active {
+    display: block !important;
+} */
+
+@media only screen and (min-width: 768px) {
+    .sidebar-content {
+        position: fixed;
+        width: inherit !important;
+    }
+}
+
+.list-header {
+    font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+    .list-body-content {
+        font-size: small !important;
+    }
+
+    .content-photo {
+        width: 20% !important;
+    }
+    .header-phone {
+        display: none !important;
+    }
+    .header-email {
+        display: none !important;
+    }
+    .content-email {
+        display: none !important;
+    }
+}
+.list-body-content {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.3);
+}
+.list-body-content:hover {
+    border: 1px solid #6257f4;
+    background-image: linear-gradient(to right, rgba(102, 93, 245, 0.3) , rgba(143, 135, 247, 0.3));
+}
+
+.is-evaline.hero {
+    background-image: linear-gradient(to right, #665df5 , #8f87f7);
+}
+
+.is-evaline {
+    background-color: #665df5 !important;
+    border-color: #6257f4 !important;
+    color: white !important;
+}
+.is-evaline:hover {
+    background-color: #6257f4 !important;
+}
+.is-evaline.is-outlined {
+    background-color: transparent !important;
+    border-color: #665df5 !important;
+    color: #665df5 !important;
+}
+.is-evaline.is-outlined:hover {
+    background-color: #665df5 !important;
+    border-color: #6257f4 !important;
+    color: white !important;
+}
+.is-evaline.is-outlined.has-background-white {
+    background-color: white !important;
+    border-color: #665df5 !important;
+    color: #665df5 !important;
+}
+.is-evaline.is-outlined.has-background-white:hover {
+    background-color: #f5f5f5 !important;
+    border-color: #6257f4 !important;
+    color: #665df5 !important;
+}
+
+.link-evaline {
+    text-decoration: none !important;
+    color: black !important;
+}
+.link-evaline:hover {
+    color: #665df5 !important;
+}
+.link-evaline-gray {
+    text-decoration: none !important;
+    color: #696969 !important;
+}
+.link-evaline-gray:hover {
+    color: #665df5 !important;
+}
+
+.evaline-feature {
+
+}
+.evaline-feature.is-active > .tile {
+    border: 1px solid #665df5 !important;
+}
+.evaline-feature.is-active > .tile > .subtitle {
+    color: #665df5 !important;
+    font-weight: bold !important;
+}
+.evaline-feature > .tile > .icon-active {
+    position: absolute;
+    display: none;
+    color: #665df5;
+}
+.evaline-feature.is-active > .tile > .icon-active {
+    display: block;
+}
+
+.divider-evaline.is-divider {
+    border-top: .1rem solid #665df5;
+}
+.divider-evaline.is-divider[data-content]::after{
+    background:#665df5;
+    color:white;
+}
+
+.is-cut-top-2 {
+    margin-top: -2rem;
+}
+.is-cut-bottom-4 {
+    margin-bottom: -4rem !important;
+}
+.is-cut-top-4 {
+    margin-top: -4rem;
+}
+.is-cut-bottom-6 {
+    margin-bottom: -6rem !important;
+}
+.is-cut-top-6 {
+    margin-top: -6rem;
+}
+.is-cut-top-8 {
+    margin-top: -8rem;
+}
+
+.has-box-shadow {
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.3);
+}
+.select.select-evaline:not(.is-multiple):not(.is-loading)::after {
+    border-color:#665df5 !important;
+    right: 1.125em;
+    z-index: 4;
+}
+
+.control>span.is-evaline{
+    background: #665df5 !important;
+    z-index: 0 !important;
+    border-radius: 4px 0px 0px 4px;
+}
+.control>.input {
+    padding-left: 3rem !important;
+}
+
+.control.has-icons-left .input, .control.has-icons-left .select select {
+    padding-left: 3rem !important;
+}
+
+select:hover {
+    border-color: #665df5 !important;
+}
+input:hover {
+    border-color: #665df5 !important;
+}
+textarea:hover {
+    border-color: #665df5 !important;
+}
+.evaline-svg-background {
+    /* background-image: url("/static/images/Scattered-Forcefields.svg"); */
+    background-color: white;
+}

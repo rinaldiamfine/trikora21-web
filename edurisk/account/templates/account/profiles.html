@@ -1,0 +1,71 @@
+{% extends "website/layout.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="columns m-0 p-0">
+        {%  include "website/widget-sidebar.html" %}
+        <div class="column p-0 has-background-light">
+            {%  include "website/widget-navbar.html" %}
+            <section class="hero is-small is-evaline p-4">
+                <div class="hero-body mt-4 mb-4">
+                    <br/>
+                </div>
+            </section>
+            <div class="column is-10 p-0 is-offset-1">
+                <section class="hero is-small has-background-white is-cut-top-2 box">
+                    <div class="hero-body">
+                        <div class="list-header columns is-12 is-mobile">
+                            <div class="column is-5">
+                                <i class="fas fa-user-circle"></i> List of Users
+                            </div>
+                            <div class="header-phone column is-3">
+                                Phone
+                            </div>
+                            <div class="header-email column is-4">
+                                Email
+                            </div>
+                        </div>
+                        <div class="is-divider divider-evaline mt-1"></div>
+                        <div class="list-body">
+                            {% for profile in list %}
+                                <div class="list-body-content is-vcentered columns is-12 profile-list is-mobile" data-href="{{ profile.id }}">
+                                    <div class="content-photo column is-1">
+                                        <!-- {{ profile.photo }} -->
+                                        {% if profile.gender == 'm' %}
+                                            <article class="">
+                                                <figure class="image is-1by1 is-48x48">
+                                                    <img src="/static/undraw/male_avatar.svg" alt="">
+                                                </figure>
+                                            </article>
+                                        {% endif %}
+                                        {% if profile.gender != 'm' %}
+                                            <article class="">
+                                                <figure class="image is-1by1 is-48x48">
+                                                    <img src="/static/undraw/female_avatar.svg" alt="">
+                                                </figure>
+                                            </article>
+                                        {% endif %}
+                                    </div>
+                                    <div class="content-name column is-4">
+                                        <b>{{ profile.name }}</b>
+                                        <br/>
+                                        {{ profile.title }}
+                                    </div>
+                                    <div class="content-phone column is-3">
+                                        {{ profile.phone }}
+                                    </div>
+                                    <div class="content-email column is-4">
+                                        {{ profile.email }}
+                                    </div>
+                                </div>
+                                <br/>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+                {%  include "website/footer.html" %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

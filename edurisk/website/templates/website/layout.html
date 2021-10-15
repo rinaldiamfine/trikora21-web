@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" >
+    {%  include "website/styles.html" %}
+    <body>
+        <div class="wrapper">
+            {% block content %}      
+            {% endblock %}
+        </div>
+        {% if not user.is_authenticated %}
+            {%  include "website/footer.html" %}
+        {% endif %}
+    </body>
+    {%  include "website/widget-backtotop.html" %}
+    {%  include "website/scripts.html" %}
+</html>
