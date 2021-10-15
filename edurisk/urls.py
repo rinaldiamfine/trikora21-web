@@ -32,4 +32,6 @@ urlpatterns = [
     path('', include('account.urls')),
     path('login/', account_views.LoginView.as_view(), name='login'),
     path('logout/', account_views.signout, name='logout'),
+    
+    path('', include('question.urls')),
 ]
