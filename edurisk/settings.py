@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'account.apps.AccountConfig',
     'website.apps.WebsiteConfig',
+    'question.apps.QuestionConfig',
 ]
 
 AUTH_USER_MODEL = 'account.User'
