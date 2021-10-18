@@ -18,12 +18,13 @@ class QuestionViewSet(viewsets.ModelViewSet):
         queryset = Question.objects.all()
         if self.request.method == "GET":
             q = self.request.GET.get('q', '')
-            queryset = queryset.filter(question_category=q)
-            length_query = len(queryset)
-            random_index = randint(0, length_query - 1)
-            random_value = queryset[random_index]
-            random_q = queryset.filter(question_category=q, id=random_value.id)
-            return random_q
+            if q:
+                queryset = queryset.filter(question_category=q)
+                length_query = len(queryset)
+                random_index = randint(0, length_query - 1)
+                random_value = queryset[random_index]
+                random_q = queryset.filter(question_category=q, id=random_value.id)
+                return random_q
         return queryset
     
 class QuestionAnswerViewSet(viewsets.ModelViewSet):
@@ -34,6 +35,7 @@ class QuestionAnswerViewSet(viewsets.ModelViewSet):
         queryset = QuestionAnswer.objects.all()
         if self.request.method == "GET":
             q = self.request.GET.get('q', '')
-            queryset = queryset.filter(question_answer=q)
+            if q:
+                queryset = queryset.filter(question_answer=q)
         return queryset
     
