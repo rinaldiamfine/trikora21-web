@@ -12,7 +12,6 @@ router.register(r'question', views.QuestionViewSet)
 router.register(r'question-answer', views.QuestionAnswerViewSet)
 
 urlpatterns = [
-#    url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
-#    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    # path('game/question-category/<int:qcid>', views.QuestionCategoryFilters, name="QuestionCategoryFilters")
 ]
